@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ContactApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/colorDBlue</item>
+    </style>
+
+    <style name="Theme.ContactApp" parent="Base.Theme.ContactApp"/>
+
+    <style name="Theme.Caption" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/kanit_regular</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorDBlue</item>
+    </style>
+
+</resources>

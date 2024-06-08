@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mcvContactRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="10dp"
+    android:layout_marginHorizontal="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_view_gradient">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcvImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:cardCornerRadius="200dp"
+            android:layout_margin="10dp"
+            app:cardElevation="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivContactIcon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:src="@drawable/contacts_logo"
+                android:scaleType="centerCrop"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mtvNameSign"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@color/colorBlue"
+                android:textFontWeight="10"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:fontFamily="@font/kanit_semibold"
+                android:includeFontPadding="false"
+                android:textSize="30sp"
+                android:textStyle="bold|italic"
+                tools:targetApi="p"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Theme.Caption"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/mtvUserMobile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/mcvImage"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvUserMobile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Theme.Caption"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintStart_toEndOf="@+id/mcvImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mtvUserName"
+            app:layout_constraintBottom_toTopOf="@id/mtvUserEmail"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvUserEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Theme.Caption"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintStart_toEndOf="@+id/mcvImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mtvUserMobile"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
